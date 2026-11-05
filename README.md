@@ -183,3 +183,9 @@ For this you just have to use EndlessStreamingService instead of SpeechToText.
     
     responseStream.listen((data) {...});
 ```
+
+brew install protobuf
+
+dart pub global activate protoc_plugin
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+protoc-gen-dart

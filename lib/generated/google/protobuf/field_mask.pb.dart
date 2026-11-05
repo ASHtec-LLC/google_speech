@@ -232,12 +232,12 @@ class FieldMask extends $pb.GeneratedMessage with $mixin.FieldMaskMixin {
       create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'FieldMask',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
-      createEmptyInstance: create,
-      toProto3Json: $mixin.FieldMaskMixin.toProto3JsonHelper,
-      fromProto3Json: $mixin.FieldMaskMixin.fromProto3JsonHelper)
+    _omitMessageNames ? '' : 'FieldMask',
+    package: const $pb.PackageName(_omitMessageNames ? '' : 'google.protobuf'),
+    createEmptyInstance: create,
+    // toProto3Json: $mixin.FieldMaskMixin.toProto3JsonHelper,
+    // fromProto3Json: $mixin.FieldMaskMixin.fromProto3JsonHelper,
+  )
     ..pPS(1, _omitFieldNames ? '' : 'paths')
     ..hasRequiredFields = false;
 

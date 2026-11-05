@@ -105,9 +105,10 @@ class _AudioRecognizeState extends State<AudioRecognize> {
     var responseText = '';
 
     responseStream.listen((data) {
-      final currentText =
-          data.results.where((e) => e.alternatives.isNotEmpty).
-          map((e) => e.alternatives.first.transcript).join('\n');
+      final currentText = data.results
+          .where((e) => e.alternatives.isNotEmpty)
+          .map((e) => e.alternatives.first.transcript)
+          .join('\n');
 
       if (data.results.first.isFinal) {
         responseText += '\n' + currentText;
@@ -202,7 +203,7 @@ class _RecognizeContent extends StatelessWidget {
           ),
           Text(
             text,
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),

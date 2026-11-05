@@ -110,9 +110,10 @@ class _AudioRecognizeState extends State<AudioRecognize> {
         .pollingLongRunningRecognize(config, 'YOUR-GS-URI')
         .then((LongRunningRequestResult result) {
       setState(() {
-        text =
-            result.results?.map((e) => e.alternatives.first.transcript).join('\n') ??
-                "";
+        text = result.results
+                ?.map((e) => e.alternatives.first.transcript)
+                .join('\n') ??
+            "";
         recognizeFinished = true;
         recognizing = false;
       });
@@ -230,7 +231,7 @@ class _RecognizeContent extends StatelessWidget {
           ),
           Text(
             text ?? '---',
-            style: Theme.of(context).textTheme.bodyText1,
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ],
       ),
